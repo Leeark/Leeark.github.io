@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue2的知识点概览
-categories: Blog
+categories: summary
 description: Vue2系统性知识
 keywords: 前端框架, Vue
 ---
