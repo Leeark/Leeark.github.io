@@ -1,18 +1,16 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 诸有所作；亦不唐捐
+keywords: Leeark, 李梦豪
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+夜阑卧听风吹雨，
 
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+铁马冰河入梦来。
 
 ## 联系
 
