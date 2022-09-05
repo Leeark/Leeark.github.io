@@ -5,7 +5,7 @@
   
     {
       "title"    : "页面没有找到",
-      "url"      : "https://github.com/Leeark.github.io/404.html",
+      "url"      : "/404.html",
       "keywords" : "404"
     } ,
   
@@ -13,7 +13,7 @@
   
     {
       "title"    : "About",
-      "url"      : "https://github.com/Leeark.github.io/about/",
+      "url"      : "/about/",
       "keywords" : "Leeark, 李梦豪"
     } ,
   
@@ -21,7 +21,7 @@
   
     {
       "title"    : "归档",
-      "url"      : "https://github.com/Leeark.github.io/archives/",
+      "url"      : "/archives/",
       "keywords" : "归档"
     } ,
   
@@ -29,7 +29,7 @@
   
     {
       "title"    : "Categories",
-      "url"      : "https://github.com/Leeark.github.io/categories/",
+      "url"      : "/categories/",
       "keywords" : "分类"
     } ,
   
@@ -37,7 +37,7 @@
   
     {
       "title"    : "捐助 / Donate",
-      "url"      : "https://github.com/Leeark.github.io/donate/",
+      "url"      : "/donate/",
       "keywords" : "Donate"
     } ,
   
@@ -47,7 +47,7 @@
   
     {
       "title"    : "Links",
-      "url"      : "https://github.com/Leeark.github.io/links/",
+      "url"      : "/links/",
       "keywords" : "友情链接"
     } ,
   
@@ -55,7 +55,7 @@
   
     {
       "title"    : "mindmap",
-      "url"      : "https://github.com/Leeark.github.io/mindmap-viewer/",
+      "url"      : "/mindmap-viewer/",
       "keywords" : "mindmap"
     } ,
   
@@ -63,7 +63,7 @@
   
     {
       "title"    : "Open Source Projects",
-      "url"      : "https://github.com/Leeark.github.io/open-source/",
+      "url"      : "/open-source/",
       "keywords" : "开源,open-source,GitHub,开源项目"
     } ,
   
@@ -73,7 +73,7 @@
   
     {
       "title"    : "Wiki",
-      "url"      : "https://github.com/Leeark.github.io/wiki/",
+      "url"      : "/wiki/",
       "keywords" : "维基, Wiki"
     } ,
   
@@ -92,7 +92,7 @@
       "title"    : "在 Mac 下编译 chaosblade",
       "category" : "混沌工程",
       
-      "url"      : "https://github.com/Leeark.github.io/2022/02/19/compile-chaosblade-on-mac/",
+      "url"      : "/2022/02/19/compile-chaosblade-on-mac/",
       "keywords" : "混沌工程, chaosblade"
     } ,
   
@@ -100,7 +100,7 @@
       "title"    : "使用 iPhone 感觉不好的几点体验",
       "category" : "Blog",
       
-      "url"      : "https://github.com/Leeark.github.io/2022/03/06/iphone-vs-xiaomi/",
+      "url"      : "/2022/03/06/iphone-vs-xiaomi/",
       "keywords" : "iPhone, Xiaomi"
     } ,
   
@@ -108,7 +108,7 @@
       "title"    : "Vue2的知识点概览",
       "category" : "summary",
       
-      "url"      : "https://github.com/Leeark.github.io/2022/09/04/vue-summary/",
+      "url"      : "/2022/09/04/vue-summary/",
       "keywords" : "前端框架, Vue"
     } ,
   
@@ -116,7 +116,7 @@
       "title"    : "小狗钱钱整理-摘录",
       "category" : "books",
       
-      "url"      : "https://github.com/Leeark.github.io/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/",
+      "url"      : "/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/",
       "keywords" : "读书, 理财"
     } ,
   
@@ -124,7 +124,7 @@
       "title"    : "JSON",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-3rd-json/",
+      "url"      : "/wiki/android-3rd-json/",
       "keywords" : "Android"
     } ,
   
@@ -132,7 +132,7 @@
       "title"    : "网络请求",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-3rd-network/",
+      "url"      : "/wiki/android-3rd-network/",
       "keywords" : "Android"
     } ,
   
@@ -140,7 +140,7 @@
       "title"    : "ORM",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-3rd-orm/",
+      "url"      : "/wiki/android-3rd-orm/",
       "keywords" : "Android"
     } ,
   
@@ -148,7 +148,7 @@
       "title"    : "动画",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-animation/",
+      "url"      : "/wiki/android-animation/",
       "keywords" : "Android"
     } ,
   
@@ -156,7 +156,7 @@
       "title"    : "架构模式",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-arch-mode/",
+      "url"      : "/wiki/android-arch-mode/",
       "keywords" : "Android"
     } ,
   
@@ -164,7 +164,7 @@
       "title"    : "体系结构",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-arch/",
+      "url"      : "/wiki/android-arch/",
       "keywords" : "Android"
     } ,
   
@@ -172,7 +172,7 @@
       "title"    : "ART 与 Dalvik 的区别",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-art-and-dalvik/",
+      "url"      : "/wiki/android-art-and-dalvik/",
       "keywords" : "Android"
     } ,
   
@@ -180,7 +180,7 @@
       "title"    : "开机自启动",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-auto-boot/",
+      "url"      : "/wiki/android-auto-boot/",
       "keywords" : "Android"
     } ,
   
@@ -188,7 +188,7 @@
       "title"    : "Activity",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-components-activity/",
+      "url"      : "/wiki/android-components-activity/",
       "keywords" : "Android"
     } ,
   
@@ -196,7 +196,7 @@
       "title"    : "BroadcastReceiver",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-components-broadcastreceiver/",
+      "url"      : "/wiki/android-components-broadcastreceiver/",
       "keywords" : "Android"
     } ,
   
@@ -204,7 +204,7 @@
       "title"    : "Fragment",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-components-fragment/",
+      "url"      : "/wiki/android-components-fragment/",
       "keywords" : "Android"
     } ,
   
@@ -212,7 +212,7 @@
       "title"    : "Intent",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-components-intent/",
+      "url"      : "/wiki/android-components-intent/",
       "keywords" : "Android"
     } ,
   
@@ -220,7 +220,7 @@
       "title"    : "Service",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-components-service/",
+      "url"      : "/wiki/android-components-service/",
       "keywords" : "Android"
     } ,
   
@@ -228,7 +228,7 @@
       "title"    : "Context",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-context/",
+      "url"      : "/wiki/android-context/",
       "keywords" : "Android"
     } ,
   
@@ -236,7 +236,7 @@
       "title"    : "事件分发机制",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-event-dispatch/",
+      "url"      : "/wiki/android-event-dispatch/",
       "keywords" : "Android"
     } ,
   
@@ -244,7 +244,7 @@
       "title"    : "进程间通信",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-ipc/",
+      "url"      : "/wiki/android-ipc/",
       "keywords" : "Android"
     } ,
   
@@ -252,7 +252,7 @@
       "title"    : "消息机制",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-messages/",
+      "url"      : "/wiki/android-messages/",
       "keywords" : "Android"
     } ,
   
@@ -260,7 +260,7 @@
       "title"    : "Android 开发技术概述",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-overview/",
+      "url"      : "/wiki/android-overview/",
       "keywords" : "Android"
     } ,
   
@@ -268,7 +268,7 @@
       "title"    : "插件化",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-plugin/",
+      "url"      : "/wiki/android-plugin/",
       "keywords" : "Android"
     } ,
   
@@ -276,7 +276,7 @@
       "title"    : "坐标系",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-position/",
+      "url"      : "/wiki/android-position/",
       "keywords" : "Android"
     } ,
   
@@ -284,7 +284,7 @@
       "title"    : "Android 逆向工程",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-reverse-engineering/",
+      "url"      : "/wiki/android-reverse-engineering/",
       "keywords" : "keyword1, keyword2"
     } ,
   
@@ -292,7 +292,7 @@
       "title"    : "屏幕适配",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-screen-support/",
+      "url"      : "/wiki/android-screen-support/",
       "keywords" : "Android"
     } ,
   
@@ -300,7 +300,7 @@
       "title"    : "软键盘",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-softinput/",
+      "url"      : "/wiki/android-softinput/",
       "keywords" : "Android"
     } ,
   
@@ -308,7 +308,7 @@
       "title"    : "Android Studio",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-studio/",
+      "url"      : "/wiki/android-studio/",
       "keywords" : "Android, Android Studio"
     } ,
   
@@ -316,7 +316,7 @@
       "title"    : "Awesome Adb",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-tools-adb/",
+      "url"      : "/wiki/android-tools-adb/",
       "keywords" : "adb, Andriod Debug Bridge"
     } ,
   
@@ -324,7 +324,7 @@
       "title"    : "构建和签名",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-tools-build/",
+      "url"      : "/wiki/android-tools-build/",
       "keywords" : "Android"
     } ,
   
@@ -332,7 +332,7 @@
       "title"    : "更新 UI",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-update-ui/",
+      "url"      : "/wiki/android-update-ui/",
       "keywords" : "Android"
     } ,
   
@@ -340,7 +340,7 @@
       "title"    : "Button",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-button/",
+      "url"      : "/wiki/android-view-button/",
       "keywords" : "Android"
     } ,
   
@@ -348,7 +348,7 @@
       "title"    : "CheckBox",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-checkbox/",
+      "url"      : "/wiki/android-view-checkbox/",
       "keywords" : "Android"
     } ,
   
@@ -356,7 +356,7 @@
       "title"    : "Dialog",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-dialog/",
+      "url"      : "/wiki/android-view-dialog/",
       "keywords" : "Android"
     } ,
   
@@ -364,7 +364,7 @@
       "title"    : "EditText",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-edittext/",
+      "url"      : "/wiki/android-view-edittext/",
       "keywords" : "Android"
     } ,
   
@@ -372,7 +372,7 @@
       "title"    : "ImageView",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-imageview/",
+      "url"      : "/wiki/android-view-imageview/",
       "keywords" : "Android"
     } ,
   
@@ -380,7 +380,7 @@
       "title"    : "LinearLayout",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-linearlayout/",
+      "url"      : "/wiki/android-view-linearlayout/",
       "keywords" : "Android"
     } ,
   
@@ -388,7 +388,7 @@
       "title"    : "ListView",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-listview/",
+      "url"      : "/wiki/android-view-listview/",
       "keywords" : "Android"
     } ,
   
@@ -396,7 +396,7 @@
       "title"    : "RecyclerView",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-recyclerview/",
+      "url"      : "/wiki/android-view-recyclerview/",
       "keywords" : "Android"
     } ,
   
@@ -404,7 +404,7 @@
       "title"    : "TabLayout",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-tablayout/",
+      "url"      : "/wiki/android-view-tablayout/",
       "keywords" : "Android"
     } ,
   
@@ -412,7 +412,7 @@
       "title"    : "TextView",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-textview/",
+      "url"      : "/wiki/android-view-textview/",
       "keywords" : "Android"
     } ,
   
@@ -420,7 +420,7 @@
       "title"    : "Toolbar",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-toolbar/",
+      "url"      : "/wiki/android-view-toolbar/",
       "keywords" : "Android"
     } ,
   
@@ -428,7 +428,7 @@
       "title"    : "ViewPager",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-viewpager/",
+      "url"      : "/wiki/android-view-viewpager/",
       "keywords" : "Android"
     } ,
   
@@ -436,7 +436,7 @@
       "title"    : "WebView",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view-webview/",
+      "url"      : "/wiki/android-view-webview/",
       "keywords" : "Android"
     } ,
   
@@ -444,7 +444,7 @@
       "title"    : "View",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/android-view/",
+      "url"      : "/wiki/android-view/",
       "keywords" : "Android"
     } ,
   
@@ -452,7 +452,7 @@
       "title"    : "AsciiDoc Intro",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/asciidoc-intro/",
+      "url"      : "/wiki/asciidoc-intro/",
       "keywords" : "AsciiDoc"
     } ,
   
@@ -460,7 +460,7 @@
       "title"    : "Axure",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/axure/",
+      "url"      : "/wiki/axure/",
       "keywords" : "Axure RP"
     } ,
   
@@ -468,7 +468,7 @@
       "title"    : "Badminton",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/badminton/",
+      "url"      : "/wiki/badminton/",
       "keywords" : "羽毛球"
     } ,
   
@@ -476,7 +476,7 @@
       "title"    : "单例模式",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-dp-singleton/",
+      "url"      : "/wiki/basis-dp-singleton/",
       "keywords" : "Basis"
     } ,
   
@@ -484,7 +484,7 @@
       "title"    : "模板方法模式",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-dp-template-method/",
+      "url"      : "/wiki/basis-dp-template-method/",
       "keywords" : "Basis"
     } ,
   
@@ -492,7 +492,7 @@
       "title"    : "设计模式",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-dp/",
+      "url"      : "/wiki/basis-dp/",
       "keywords" : "Basis"
     } ,
   
@@ -500,7 +500,7 @@
       "title"    : "串口通信",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-hardware-serial-port/",
+      "url"      : "/wiki/basis-hardware-serial-port/",
       "keywords" : "Basis"
     } ,
   
@@ -508,7 +508,7 @@
       "title"    : "网络",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-network/",
+      "url"      : "/wiki/basis-network/",
       "keywords" : "Basis"
     } ,
   
@@ -516,7 +516,7 @@
       "title"    : "面向对象",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-oop/",
+      "url"      : "/wiki/basis-oop/",
       "keywords" : "Basis"
     } ,
   
@@ -524,7 +524,7 @@
       "title"    : "I/O 模型",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-os-io/",
+      "url"      : "/wiki/basis-os-io/",
       "keywords" : "Basis"
     } ,
   
@@ -532,7 +532,7 @@
       "title"    : "进程",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-os-process/",
+      "url"      : "/wiki/basis-os-process/",
       "keywords" : "Basis"
     } ,
   
@@ -540,7 +540,7 @@
       "title"    : "线程安全与可重入",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-os-thread-safe-and-reentrant/",
+      "url"      : "/wiki/basis-os-thread-safe-and-reentrant/",
       "keywords" : "Basis"
     } ,
   
@@ -548,7 +548,7 @@
       "title"    : "线程",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/basis-os-thread/",
+      "url"      : "/wiki/basis-os-thread/",
       "keywords" : "Basis"
     } ,
   
@@ -556,7 +556,7 @@
       "title"    : "中文文案排版指北（简体中文版）",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/chinese-copywriting-guidelines/",
+      "url"      : "/wiki/chinese-copywriting-guidelines/",
       "keywords" : "中文文案排版指北"
     } ,
   
@@ -564,7 +564,7 @@
       "title"    : "Eclipse",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/eclipse/",
+      "url"      : "/wiki/eclipse/",
       "keywords" : "Eclipse"
     } ,
   
@@ -572,7 +572,7 @@
       "title"    : "Emacs",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/emacs/",
+      "url"      : "/wiki/emacs/",
       "keywords" : "Emacs, 快捷键"
     } ,
   
@@ -580,7 +580,7 @@
       "title"    : "Excel",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/excel/",
+      "url"      : "/wiki/excel/",
       "keywords" : "Excel, Office"
     } ,
   
@@ -588,7 +588,7 @@
       "title"    : "Git",
       "category" : "Git",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/git/",
+      "url"      : "/wiki/git/",
       "keywords" : "Git, 版本控制"
     } ,
   
@@ -596,7 +596,7 @@
       "title"    : "GitHub",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/github/",
+      "url"      : "/wiki/github/",
       "keywords" : "GitHub"
     } ,
   
@@ -604,7 +604,7 @@
       "title"    : "善用佳软",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/good-soft/",
+      "url"      : "/wiki/good-soft/",
       "keywords" : "软件, 推荐"
     } ,
   
@@ -612,7 +612,7 @@
       "title"    : "IDA Pro",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/ida-pro/",
+      "url"      : "/wiki/ida-pro/",
       "keywords" : "debug, IDA Pro"
     } ,
   
@@ -620,7 +620,7 @@
       "title"    : "IntelliJ IDEA",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/intellij-idea/",
+      "url"      : "/wiki/intellij-idea/",
       "keywords" : "IDEA, Java"
     } ,
   
@@ -628,7 +628,7 @@
       "title"    : "语言基础",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-basis/",
+      "url"      : "/wiki/java-basis/",
       "keywords" : "Android"
     } ,
   
@@ -636,7 +636,7 @@
       "title"    : "Dubbo",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-dubbo/",
+      "url"      : "/wiki/java-dubbo/",
       "keywords" : "Java, Dubbo"
     } ,
   
@@ -644,7 +644,7 @@
       "title"    : "内部类",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-internal-class/",
+      "url"      : "/wiki/java-internal-class/",
       "keywords" : "Android"
     } ,
   
@@ -652,7 +652,7 @@
       "title"    : "JVM",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-jvm/",
+      "url"      : "/wiki/java-jvm/",
       "keywords" : "Android"
     } ,
   
@@ -660,7 +660,7 @@
       "title"    : "Lombok",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-lombok/",
+      "url"      : "/wiki/java-lombok/",
       "keywords" : "Lombok"
     } ,
   
@@ -668,7 +668,7 @@
       "title"    : "Maven",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-maven/",
+      "url"      : "/wiki/java-maven/",
       "keywords" : "Java, Maven"
     } ,
   
@@ -676,7 +676,7 @@
       "title"    : "MyBatis-Plus",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-mybatis-plus/",
+      "url"      : "/wiki/java-mybatis-plus/",
       "keywords" : "Java, MyBatis-Plus"
     } ,
   
@@ -684,7 +684,7 @@
       "title"    : "多线程",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-threads/",
+      "url"      : "/wiki/java-threads/",
       "keywords" : "Android"
     } ,
   
@@ -692,7 +692,7 @@
       "title"    : "开发工具箱",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/java-toolbox/",
+      "url"      : "/wiki/java-toolbox/",
       "keywords" : "Java, 工具箱"
     } ,
   
@@ -700,7 +700,7 @@
       "title"    : "Kindle 屏保图片",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/kindle-screensavers/",
+      "url"      : "/wiki/kindle-screensavers/",
       "keywords" : "kindle, Screensavers, Paperwhite"
     } ,
   
@@ -708,7 +708,7 @@
       "title"    : "Kindle",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/kindle/",
+      "url"      : "/wiki/kindle/",
       "keywords" : "Kindle"
     } ,
   
@@ -716,7 +716,7 @@
       "title"    : "Linux/Unix",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/linux/",
+      "url"      : "/wiki/linux/",
       "keywords" : "Linux"
     } ,
   
@@ -724,7 +724,7 @@
       "title"    : "Mac OS X",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/mac/",
+      "url"      : "/wiki/mac/",
       "keywords" : "Mac"
     } ,
   
@@ -732,7 +732,7 @@
       "title"    : "Markdown Intro",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/markdown-intro/",
+      "url"      : "/wiki/markdown-intro/",
       "keywords" : "markdown"
     } ,
   
@@ -740,7 +740,7 @@
       "title"    : "Markdown",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/markdown/",
+      "url"      : "/wiki/markdown/",
       "keywords" : "Markdown"
     } ,
   
@@ -748,7 +748,7 @@
       "title"    : "MPV",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/mpv/",
+      "url"      : "/wiki/mpv/",
       "keywords" : "mpv"
     } ,
   
@@ -756,7 +756,7 @@
       "title"    : "MySQL",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/mysql/",
+      "url"      : "/wiki/mysql/",
       "keywords" : "MySQL"
     } ,
   
@@ -764,7 +764,7 @@
       "title"    : "OllyDbg",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/ollydbg/",
+      "url"      : "/wiki/ollydbg/",
       "keywords" : "debug, ollydbg"
     } ,
   
@@ -772,7 +772,7 @@
       "title"    : "OneNote",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/onenote/",
+      "url"      : "/wiki/onenote/",
       "keywords" : "OneNote, GTD"
     } ,
   
@@ -780,7 +780,7 @@
       "title"    : "企业微信",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/open-wxwork/",
+      "url"      : "/wiki/open-wxwork/",
       "keywords" : "企业微信"
     } ,
   
@@ -788,7 +788,7 @@
       "title"    : "PHP",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/php/",
+      "url"      : "/wiki/php/",
       "keywords" : "php"
     } ,
   
@@ -796,7 +796,7 @@
       "title"    : "PowerShell",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/powershell/",
+      "url"      : "/wiki/powershell/",
       "keywords" : "Windows, PowerShell"
     } ,
   
@@ -804,7 +804,7 @@
       "title"    : "Python",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/python/",
+      "url"      : "/wiki/python/",
       "keywords" : "Python"
     } ,
   
@@ -812,7 +812,7 @@
       "title"    : "Qt Creator",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/qt-creator/",
+      "url"      : "/wiki/qt-creator/",
       "keywords" : "Qt, Qt Creator"
     } ,
   
@@ -820,7 +820,7 @@
       "title"    : "Scoop",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/scoop/",
+      "url"      : "/wiki/scoop/",
       "keywords" : "scoop, windows"
     } ,
   
@@ -828,7 +828,7 @@
       "title"    : "Skill Tree",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/skill-tree/",
+      "url"      : "/wiki/skill-tree/",
       "keywords" : "技能树, 思维导图, mindmap, 脑图"
     } ,
   
@@ -836,7 +836,7 @@
       "title"    : "Source Insight",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/source-insight/",
+      "url"      : "/wiki/source-insight/",
       "keywords" : "Source Insight"
     } ,
   
@@ -844,7 +844,7 @@
       "title"    : "Swimming",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/swimming/",
+      "url"      : "/wiki/swimming/",
       "keywords" : "游泳, 蛙泳"
     } ,
   
@@ -852,7 +852,7 @@
       "title"    : "Wiki Template",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/template/",
+      "url"      : "/wiki/template/",
       "keywords" : "keyword1, keyword2"
     } ,
   
@@ -860,7 +860,7 @@
       "title"    : "Vim",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/vim/",
+      "url"      : "/wiki/vim/",
       "keywords" : "Vim"
     } ,
   
@@ -868,7 +868,7 @@
       "title"    : "Visio",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/visio/",
+      "url"      : "/wiki/visio/",
       "keywords" : "Visio"
     } ,
   
@@ -876,7 +876,7 @@
       "title"    : "Visual Studio Code",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/visual-studio-code/",
+      "url"      : "/wiki/visual-studio-code/",
       "keywords" : "Visual Studio Code"
     } ,
   
@@ -884,7 +884,7 @@
       "title"    : "Visual Studio",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/visual-studio/",
+      "url"      : "/wiki/visual-studio/",
       "keywords" : "Visual Studio"
     } ,
   
@@ -892,7 +892,7 @@
       "title"    : "微信",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/wechat/",
+      "url"      : "/wiki/wechat/",
       "keywords" : "微信, wechat"
     } ,
   
@@ -900,7 +900,7 @@
       "title"    : "Windows Terminal",
       "category" : "",
       
-      "url"      : "https://github.com/Leeark.github.io/wiki/windows-terminal/",
+      "url"      : "/wiki/windows-terminal/",
       "keywords" : "Windows Terminal"
     } 
   

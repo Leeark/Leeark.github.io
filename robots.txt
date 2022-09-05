@@ -1,1 +1,1 @@
-Sitemap: https://github.com/Leeark.github.io/sitemap.xml
+Sitemap: /sitemap.xml
