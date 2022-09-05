@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-05T14:50:14+08:00</updated><id>/feed.xml</id><title type="html">reading writing | Lee</title><subtitle>李梦豪的个人博客</subtitle><author><name>Menghao Li</name></author><entry><title type="html">小狗钱钱整理-摘录</title><link href="/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/" rel="alternate" type="text/html" title="小狗钱钱整理-摘录" /><published>2022-09-05T00:00:00+08:00</published><updated>2022-09-05T00:00:00+08:00</updated><id>/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86</id><content type="html" xml:base="/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/">&lt;p&gt;小狗钱钱整理-摘录&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-05T15:55:06+08:00</updated><id>/feed.xml</id><title type="html">reading writing | Lee</title><subtitle>李梦豪的个人博客</subtitle><author><name>Menghao Li</name></author><entry><title type="html">小狗钱钱整理-摘录</title><link href="/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/" rel="alternate" type="text/html" title="小狗钱钱整理-摘录" /><published>2022-09-05T00:00:00+08:00</published><updated>2022-09-05T00:00:00+08:00</updated><id>/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86</id><content type="html" xml:base="/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/">&lt;p&gt;小狗钱钱整理-摘录&lt;/p&gt;
 
 &lt;h1 id=&quot;动力为何需要钱&quot;&gt;动力：为何需要钱？&lt;/h1&gt;
 
@@ -158,7 +158,7 @@
 
     &lt;p&gt;功能：用于解析标签体内容&lt;/p&gt;
 
-    &lt;p&gt;写法：，xxx是js表达式，且可以直接读取到data中的所有属性&lt;/p&gt;
+    &lt;p&gt;写法：{ {xxx} }，xxx是js表达式，且可以直接读取到data中的所有属性&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;指令语法:&lt;/p&gt;
@@ -611,9 +611,9 @@
   &lt;p&gt;这样有啥意义？明明通过 vm._data.name 也可以访问 name 的值，为啥费力去这样操作？&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在插值语法中， 取到的值就相当于 ，不用数据代理的话，在插值语法就要这样去写了。&lt;/p&gt;
+&lt;p&gt;在插值语法中，{ { name } } 取到的值就相当于 { { vm.name } }，不用数据代理的话，在插值语法就要这样去写了。&lt;/p&gt;
 
-&lt;p&gt;这不符合直觉，怪怪的。vue 这样设计更利于开发者开发，我们在研究原理会觉得有些复杂（笑~）&lt;/p&gt;
+&lt;p&gt;{ { _data. name } } 这不符合直觉，怪怪的。vue 这样设计更利于开发者开发，我们在研究原理会觉得有些复杂（笑~）&lt;/p&gt;
 
 &lt;p&gt;来个尚硅谷张天禹老师做的图（非常推荐去看他的课，讲的非常好）&lt;/p&gt;
 
@@ -2254,12 +2254,13 @@
 &lt;p&gt;&lt;strong&gt;语法：&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;注册过滤器：Vue.filter(name,callback) 或 new Vue{filters:{}}&lt;/li&gt;
+  &lt;li&gt;注册过滤器：Vue.filter(name,callback) 或 new Vue{filters:{} }&lt;/li&gt;
   &lt;li&gt;
     &lt;table&gt;
       &lt;tbody&gt;
         &lt;tr&gt;
-          &lt;td&gt;使用过滤器：  或  v-bind:属性 = “xxx&lt;/td&gt;
+          &lt;td&gt;使用过滤器：{ { xxx&lt;/td&gt;
+          &lt;td&gt;过滤器名} }  或  v-bind:属性 = “xxx&lt;/td&gt;
           &lt;td&gt;过滤器名”&lt;/td&gt;
         &lt;/tr&gt;
       &lt;/tbody&gt;
@@ -2329,7 +2330,7 @@
 
 &lt;p&gt;1.作用：向其所在的节点中渲染文本内容。&lt;/p&gt;
 
-&lt;p&gt;2.与插值语法的区别：v-text会替换掉节点中的内容，则不会。&lt;/p&gt;
+&lt;p&gt;2.与插值语法的区别：v-text会替换掉节点中的内容，{ {xx} }则不会。&lt;/p&gt;
 
 &lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 准备好一个容器--&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -2358,7 +2359,7 @@
 &lt;p&gt;2.与插值语法的区别：&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;v-html会替换掉节点中所有的内容，则不会。&lt;/li&gt;
+  &lt;li&gt;v-html会替换掉节点中所有的内容，{ {xx} }则不会。&lt;/li&gt;
   &lt;li&gt;v-html可以识别html结构。&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2394,7 +2395,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;本质是一个特殊属性，Vue实例创建完毕并接管容器后，会删掉v-cloak属性。&lt;/li&gt;
-  &lt;li&gt;使用css配合v-cloak可以解决网速慢时页面展示出的问题。&lt;/li&gt;
+  &lt;li&gt;使用css配合v-cloak可以解决网速慢时页面展示出{ {xxx} }的问题。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -4924,7 +4925,7 @@ sessionStorage.key(index)
 
 &lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 	&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;当前求和为：&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;当前求和为：{ {$store.state.sum} }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
 		&lt;span class=&quot;nt&quot;&gt;&amp;lt;select&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-model.number=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;n&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 			&lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
 			&lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
@@ -5590,321 +5591,4 @@ sessionStorage.key(index)
   &lt;li&gt;现代JavaScript：https://zh.javascript.info/&lt;/li&gt;
   &lt;li&gt;MDN文档：https://developer.mozilla.org/zh-CN/docs/Web&lt;/li&gt;
   &lt;li&gt;我是你的超级英雄 https://juejin.cn/post/6844903895467032589&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Menghao Li</name></author><category term="summary" /><summary type="html">vue基础用法&amp;amp;基础原理整理</summary></entry><entry><title type="html">使用 iPhone 感觉不好的几点体验</title><link href="/2022/03/06/iphone-vs-xiaomi/" rel="alternate" type="text/html" title="使用 iPhone 感觉不好的几点体验" /><published>2022-03-06T00:00:00+08:00</published><updated>2022-03-06T00:00:00+08:00</updated><id>/2022/03/06/iphone-vs-xiaomi</id><content type="html" xml:base="/2022/03/06/iphone-vs-xiaomi/">&lt;p&gt;上周有天晚上加完班下雨了，媳妇儿开车顺道带我回家，到家后过了一会儿她突然说，「对了，给你个东西」，然后从包里拿出一个黑盒子递给我，我正坐那刷沙雕视频，也没细看，见挺小一个盒子，随口问了一句「啥？充电宝啊？」，得到的是充满鄙夷的回复，「我们家需要那玩意儿吗，我买那干啥？」，接过来翻面一看，哦豁原来是 iPhone 13 Pro。&lt;/p&gt;
-
-&lt;p&gt;使用这几天后，对比原来用小米手机，感觉有几点不那么方便的地方，记录一下，看后面用习惯之后是否会有改观。&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;屏幕解锁&lt;/p&gt;
-
-    &lt;p&gt;Face ID 挺好用的，但是，戴上口罩它不好使了，又不支持指纹解锁，在外面每次使用手机就要手动输入 6 位数字密码，就很尴尬。&lt;/p&gt;
-
-    &lt;p&gt;不过听说开发版已经支持口罩解锁了，这一点后续应该会得到改善。&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Update 2022/03/14:&lt;/strong&gt; iOS 更新到 15.4 之后，已经支持戴口罩解锁，虽然有少量时候不是那么灵敏，但总体体验已经不错了。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;NFC 相关功能&lt;/p&gt;
-
-    &lt;p&gt;以刷公交卡为例（这个可能跟地域性体验相关），苹果钱包里目前不支持添加武汉通公交卡，这样用 NFC 刷地铁只能直接刷 Apple Pay 从银行卡里扣，这就需要先解锁手机，手动输入一波密码（因为在外面都戴着口罩无法面容解锁），然后还要按键确认，体验不好，这个得等啥时候支持武汉通了才会有改善。&lt;/p&gt;
-
-    &lt;p&gt;另外，貌似也不支持写入加密门禁卡。&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;Update 2022/03/14:&lt;/strong&gt; iOS 更新到 15.4 之后，支持戴口罩面容解锁了，NFC 刷武汉地铁的操作变成了唤起 Apple Pay - 面容解锁 - 刷卡，体验好了一些，当然比直接盲刷还是有差距。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;充电&lt;/p&gt;
-
-    &lt;p&gt;现在支持快充的安卓手机充电比苹果要快得多，这个对特定硬件来讲，暂时应该没有啥改善的可能性。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;管理照片/文件&lt;/p&gt;
-
-    &lt;p&gt;安卓手机连接上电脑后，就能像管理一个普通文件夹一样操作照片、文件等；苹果手机与此不同，我用「迁移到 iOS」应用同步旧数据时，最后两分钟报错了，我先没放在心上，照常使用，后来发现照片少了挺多，就想办法重新拷贝。尝试了一些办法，折腾了大半天才解决。&lt;/p&gt;
-
-    &lt;p&gt;尝试过的方法：&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;从 MacBook 同步照片/文件夹，用这个办法，拷贝照片没问题，但有个坑，拷贝过去的文件手机上无法删除，只能在电脑上将对应的文件删除后，手机连上电脑，再次同步。这就很令人心塞……我在手机上看着那些文件，却无法管理。最终放弃该方案。&lt;/li&gt;
-      &lt;li&gt;在 MacBook 和 iPhone 上同时开启照片的 iCloud 同步，最终也是使用了这种方法。遇到的坑：iCloud 上传照片是不去重的，只好上 https://icloud.com 将所有照片清空（包括最近删除的），然后重新把所有照片导到电脑的「照片」里。这里有个教训是打开 iCloud 网站请使用 Safari 浏览器，用其它浏览器（如 Edge）各种报错打不开。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;APP 里返回&lt;/p&gt;
-
-    &lt;p&gt;安卓全面屏手机一般可以设置为左、右边缘滑动均触发返回，但苹果手机只能由左边缘触发，右边缘无反应，右手持机时体验不佳。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;呼吸灯&lt;/p&gt;
-
-    &lt;p&gt;苹果手机没有前置呼吸灯。虽然可以设置为有通知时相机闪光灯闪烁，但在背面啊，而且，动静太大。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;微信语音/视频通话&lt;/p&gt;
-
-    &lt;p&gt;有天偶然看到一个新闻说微信 iOS 版在内测 Callkit，然后找人微信 call 了我一下，才发现在锁屏界面是无法直接接听微信语音和视频通话的，一脸问号，今夕何夕？&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;后续有想到的其它的点，或者这几个点体验有变化了，我再更新。&lt;/p&gt;</content><author><name>Menghao Li</name></author><category term="Blog" /><summary type="html">上周有天晚上加完班下雨了，媳妇儿开车顺道带我回家，到家后过了一会儿她突然说，「对了，给你个东西」，然后从包里拿出一个黑盒子递给我，我正坐那刷沙雕视频，也没细看，见挺小一个盒子，随口问了一句「啥？充电宝啊？」，得到的是充满鄙夷的回复，「我们家需要那玩意儿吗，我买那干啥？」，接过来翻面一看，哦豁原来是 iPhone 13 Pro。</summary></entry><entry><title type="html">在 Mac 下编译 chaosblade</title><link href="/2022/02/19/compile-chaosblade-on-mac/" rel="alternate" type="text/html" title="在 Mac 下编译 chaosblade" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>/2022/02/19/compile-chaosblade-on-mac</id><content type="html" xml:base="/2022/02/19/compile-chaosblade-on-mac/">&lt;p&gt;首先声明，这不是一份指南，这是一份失败的操作流水记录。我得到的最终结果：编译成功，但是无法运行，放弃在 Mac 平台直接使用此工具，乖乖用 Linux 或者容器环境。&lt;/p&gt;
-
-&lt;p&gt;以下问题的遇到和解决记录，基本是按时间序。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/chaosblade-io/chaosblade#compile&quot;&gt;chaosblade 项目的 README 上自行编译部分&lt;/a&gt; 说明很简单，就是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make build_darwin&lt;/code&gt; 这么一条命令而已。&lt;/p&gt;
-
-&lt;h2 id=&quot;环境准备&quot;&gt;环境准备&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;安装 go，&lt;a href=&quot;https://go.dev/&quot;&gt;https://go.dev/&lt;/a&gt; 下载最新版安装，我安装的是 1.17.7 版本，然后将 /usr/local/go/bin 添加到 PATH。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;安装和配置 JAVA 环境。（我以前装过，本次先没动它，但实际后面也遇到问题与此相关。）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;安装 Docker Desktop。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;下载源码开始编译&quot;&gt;下载源码，开始编译&lt;/h2&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone git@github.com:chaosblade-io/chaosblade.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;chaosblade
-make build_darwin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后，兵来将挡，水来土掩的问题解决之旅开始了。&lt;/p&gt;
-
-&lt;h2 id=&quot;遇到问题解决问题&quot;&gt;遇到问题，解决问题&lt;/h2&gt;
-
-&lt;h3 id=&quot;0x01-网络问题&quot;&gt;0x01 网络问题&lt;/h3&gt;
-
-&lt;p&gt;编译过程中需要下载一些源码和二进制文件，首先遇到了网络问题。&lt;/p&gt;
-
-&lt;p&gt;如果遇到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeout&lt;/code&gt; 或者 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fatal: 无法访问 'xxxx'：LibreSSL SSL_connect: Operation timed out in connection to xxx.com:443&lt;/code&gt; 之类的提示，一般是因为有一些资源偶尔需要科学上网才能访问。&lt;/p&gt;
-
-&lt;p&gt;解决方法：&lt;/p&gt;
-
-&lt;p&gt;终端挂代理：&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;http_proxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://127.0.0.1:54107
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;https_proxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://127.0.0.1:54107
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;no_proxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;chaosblade.oss-cn-hangzhou.aliyuncs.com&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;其中代理自备，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;no_proxy&lt;/code&gt; 那一行是指定从阿里域名下载不走代理。&lt;/p&gt;
-
-&lt;p&gt;如果遇到下载 &lt;a href=&quot;https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/github/sandbox/sandbox-1.3.1-bin.zip&quot;&gt;https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/github/sandbox/sandbox-1.3.1-bin.zip&lt;/a&gt; 特别慢，几 kb/s 的速度，但是用浏览器下载很快，那可以先停掉编译，直接用浏览器下载好该文件，放到 target/cache/chaosblade-exec-jvm/build-target/cache 下面，再重新开始编译。&lt;/p&gt;
-
-&lt;p&gt;同理：&lt;/p&gt;
-
-&lt;p&gt;如果遇到下载 &lt;a href=&quot;https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/release/tools.jar&quot;&gt;https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/release/tools.jar&lt;/a&gt; 特别慢，可以先停掉编译，直接用浏览器下载好该文件，放到 target/cache/chaosblade-exec-jvm/build-target/cache 下面，再重新开始编译。&lt;/p&gt;
-
-&lt;p&gt;例外是如果遇到下载 &lt;a href=&quot;https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/github/1.5.0/chaosblade-1.5.0-linux-amd64.tar.gz&quot;&gt;https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/github/1.5.0/chaosblade-1.5.0-linux-amd64.tar.gz&lt;/a&gt; 特别慢，手动下载，放到 target/cache/chaosblade-operator/build/cache 也不行，编译过程只认自己下载的。&lt;/p&gt;
-
-&lt;p&gt;由以上得出的小技巧：&lt;/p&gt;
-
-&lt;p&gt;如果从 GitHub release 界面下载 chaosblade 的 release 文件特别慢，比如 &lt;a href=&quot;https://github.com/chaosblade-io/chaosblade/releases/download/v1.3.0/chaosblade-1.3.0-darwin-amd64.tar.gz&quot;&gt;https://github.com/chaosblade-io/chaosblade/releases/download/v1.3.0/chaosblade-1.3.0-darwin-amd64.tar.gz&lt;/a&gt;，可以将链接替换为 &lt;a href=&quot;https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/github/1.3.0/chaosblade-1.3.0-darwin-amd64.tar.gz&quot;&gt;https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/github/1.3.0/chaosblade-1.3.0-darwin-amd64.tar.gz&lt;/a&gt; 加速下载。&lt;/p&gt;
-
-&lt;h3 id=&quot;0x02-go-依赖模块问题&quot;&gt;0x02 go 依赖模块问题&lt;/h3&gt;
-
-&lt;p&gt;如果遇到&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;/model.go:22:2: missing go.sum entry &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;module providing package github.com/chaosblade-io/chaosblade-exec-os/exec &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;imported by github.com/chaosblade-io/chaosblade-exec-docker/exec&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; to add:
-        go get github.com/chaosblade-io/chaosblade-exec-docker/exec
-&lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;/executor_execin.go:29:2: missing go.sum entry &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;module providing package github.com/chaosblade-io/chaosblade-spec-go/channel &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;imported by github.com/chaosblade-io/chaosblade-exec-docker/exec&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; to add:
-        go get github.com/chaosblade-io/chaosblade-exec-docker/exec
-&lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;/client.go:29:2: missing go.sum entry &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;module providing package github.com/chaosblade-io/chaosblade-spec-go/spec&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; to add:
-        go mod download github.com/chaosblade-io/chaosblade-spec-go
-&lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;/container.go:24:2: missing go.sum entry &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;module providing package github.com/chaosblade-io/chaosblade-spec-go/util&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; to add:
-        go mod download github.com/chaosblade-io/chaosblade-spec-go
-make[1]: &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;build_yaml] Error 1
-make: &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;docker] Error 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;到 target/cache/chaosblade-exec-docker 和 target/cache/chaosblade-exec-os 目录下执行&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go mod tidy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;整理依赖，参考 &lt;a href=&quot;https://stackoverflow.com/questions/67203641/missing-go-sum-entry-for-module-providing-package-package-name&quot;&gt;https://stackoverflow.com/questions/67203641/missing-go-sum-entry-for-module-providing-package-package-name&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;0x03-java-编译问题&quot;&gt;0x03 Java 编译问题&lt;/h3&gt;
-
-&lt;p&gt;如果遇到报错：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project chaosblade-exec-spi: Compilation failure: Compilation failure:
-[ERROR] 不再支持源选项 6。请使用 7 或更高版本。
-[ERROR] 不再支持目标选项 6。请使用 7 或更高版本。
-[ERROR] -&amp;gt; [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-[ERROR]
-[ERROR] After correcting the problems, you can resume the build with the command
-[ERROR]   mvn &amp;lt;args&amp;gt; -rf :chaosblade-exec-spi
-make[1]: *** [build_java] Error 1
-make: *** [java] Error 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;修改 target/cache/chaosblade-exec-jvm/chaosblade-exec-spi/pom.xml 里的&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&amp;gt;&lt;/span&gt;6&lt;span class=&quot;nt&quot;&gt;&amp;lt;/source&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;target&amp;gt;&lt;/span&gt;6&lt;span class=&quot;nt&quot;&gt;&amp;lt;/target&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;为&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&amp;gt;&lt;/span&gt;8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/source&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;target&amp;gt;&lt;/span&gt;8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/target&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;同理，后面还会遇到类似的报错，对应还要修改：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-common/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-service/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-bootstrap/chaosblade-exec-bootstrap-jvmsandbox/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-dubbo/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-jvm/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-mysql/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-postgrelsql/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-servlet/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-jedis/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-elasticsearch/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-hbase/pom.xml&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;另外：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/pom.xml&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-dubbo/pom.xml（存疑）&lt;/li&gt;
-  &lt;li&gt;target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-http/pom.xml（存疑）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;里是需要添加&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugins&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.apache.maven.plugins&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;maven-compiler-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
-                &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&amp;gt;&lt;/span&gt;8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/source&amp;gt;&lt;/span&gt;
-                &lt;span class=&quot;nt&quot;&gt;&amp;lt;target&amp;gt;&lt;/span&gt;8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/target&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如果遇到&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project chaosblade-exec-plugin-redisson: Compilation failure
-[ERROR] /Users/mazhuang/github/chaosblade/target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-redisson/src/main/java/com/alibaba/chaosblade/exec/plugin/redisson/RedissonEnhancer.java:[52,23] 对info的引用不明确
-[ERROR]   org.slf4j.Logger 中的方法 info(java.lang.String,java.lang.Object...) 和 org.slf4j.Logger 中的方法 info(java.lang.String,java.lang.Throwable) 都匹配
-[ERROR]
-[ERROR] -&amp;gt; [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-[ERROR]
-[ERROR] After correcting the problems, you can resume the build with the command
-[ERROR]   mvn &amp;lt;args&amp;gt; -rf :chaosblade-exec-plugin-redisson
-make[1]: *** [build_java] Error 1
-make: *** [java] Error 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;修改 target/cache/chaosblade-exec-jvm/chaosblade-exec-plugin/chaosblade-exec-plugin-redisson/src/main/java/com/alibaba/chaosblade/exec/plugin/redisson/RedissonEnhancer.java&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;LOGGER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;method command {}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ReflectUtil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;invokeMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;getName&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;改成&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmpResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;nc&quot;&gt;ReflectUtil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;invokeMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;getName&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;LOGGER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;method command {}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmpResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;如果遇到&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project chaosblade-exec-common: Fatal error compiling: java.lang.IllegalAccessError: class lombok.javac.apt.LombokProcessor (in unnamed module @0x45da40ad) cannot access class com.sun.tools.javac.processing.JavacProcessingEnvironment (in module jdk.compiler) because module jdk.compiler does not export com.sun.tools.javac.processing to unnamed module @0x45da40ad -&amp;gt; [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
-[ERROR]
-[ERROR] After correcting the problems, you can resume the build with the command
-[ERROR]   mvn &amp;lt;args&amp;gt; -rf :chaosblade-exec-common
-make[1]: *** [build_java] Error 1
-make: *** [java] Error 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;将 target/cache/chaosblade-exec-jvm/chaosblade-exec-common/pom.xml&lt;/p&gt;
-
-&lt;p&gt;lombok 版本由 1.18.10 改为 1.18.20，参考 https://www.cnblogs.com/ZZG-GANGAN/p/14789050.html&lt;/p&gt;
-
-&lt;p&gt;如果遇到&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;The&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;JAVA_HOME&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;environment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defined&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;correctly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;environment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;needed&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;program&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;***&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build_java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;make:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;***&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;那配置 JAVA_HOME：&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/usr/libexec/java_home &lt;span class=&quot;nt&quot;&gt;-V&lt;/span&gt;
-vim ~/.zshrc
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;/bin:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
-:wq
-&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;0x04-docker-问题&quot;&gt;0x04 Docker 问题&lt;/h3&gt;
-
-&lt;p&gt;如果遇到&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
-See 'docker run --help'.
-make: *** [upx] Error 125
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;启动 Docker Desktop，然后再开始编译。&lt;/p&gt;
-
-&lt;h3 id=&quot;0x0x-未知&quot;&gt;0x0x 未知&lt;/h3&gt;
-
-&lt;p&gt;编码过程中有个警告，不知道有无影响：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;WARN[0000] parse java spec failed, so skip it, open build/cache/chaosblade/yaml/chaosblade-jvm-spec-1.5.0.yaml: no such file or directory
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;结果&quot;&gt;结果&lt;/h2&gt;
-
-&lt;p&gt;终于编译成功了，生成了 target/chaosblade-1.5.0.tar.gz 文件。&lt;/p&gt;
-
-&lt;p&gt;但解压后执行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./blade&lt;/code&gt;，输出：&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zsh: killed     ./blade
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;下载官方 Release 的 1.3.0 的 darwin 版本文件，也是报同样的问题。&lt;/p&gt;
-
-&lt;p&gt;到 &lt;a href=&quot;https://github.com/chaosblade-io/chaosblade/issues&quot;&gt;Issues&lt;/a&gt; 里翻到了几个类似的问题，官方给出的 &lt;a href=&quot;https://github.com/chaosblade-io/chaosblade/issues/478&quot;&gt;建议&lt;/a&gt;，比如修改系统【安全与隐私】-【通用】配置等，经验证都无效。&lt;/p&gt;
-
-&lt;p&gt;至此，如文首所述，放弃了在 Mac 平台下折腾，直接用 Linux 或者容器环境来体验。&lt;/p&gt;</content><author><name>Menghao Li</name></author><category term="混沌工程" /><summary type="html">首先声明，这不是一份指南，这是一份失败的操作流水记录。我得到的最终结果：编译成功，但是无法运行，放弃在 Mac 平台直接使用此工具，乖乖用 Linux 或者容器环境。</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Menghao Li</name></author><category term="summary" /><summary type="html">vue基础用法&amp;amp;基础原理整理</summary></entry></feed>
