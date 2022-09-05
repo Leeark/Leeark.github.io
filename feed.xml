@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="https://github.com/Leeark/feed.xml" rel="self" type="application/atom+xml" /><link href="https://github.com/Leeark/" rel="alternate" type="text/html" /><updated>2022-09-05T13:43:08+08:00</updated><id>https://github.com/Leeark/feed.xml</id><title type="html">reading writing | Lee</title><subtitle>李梦豪的个人博客</subtitle><author><name>Menghao Li</name></author><entry><title type="html">小狗钱钱整理-摘录</title><link href="https://github.com/Leeark/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/" rel="alternate" type="text/html" title="小狗钱钱整理-摘录" /><published>2022-09-05T00:00:00+08:00</published><updated>2022-09-05T00:00:00+08:00</updated><id>https://github.com/Leeark/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86</id><content type="html" xml:base="https://github.com/Leeark/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/">&lt;p&gt;小狗钱钱整理-摘录&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="https://github.com/Leeark/feed.xml" rel="self" type="application/atom+xml" /><link href="https://github.com/Leeark/" rel="alternate" type="text/html" /><updated>2022-09-05T14:01:56+08:00</updated><id>https://github.com/Leeark/feed.xml</id><title type="html">reading writing | Lee</title><subtitle>李梦豪的个人博客</subtitle><author><name>Menghao Li</name></author><entry><title type="html">小狗钱钱整理-摘录</title><link href="https://github.com/Leeark/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/" rel="alternate" type="text/html" title="小狗钱钱整理-摘录" /><published>2022-09-05T00:00:00+08:00</published><updated>2022-09-05T00:00:00+08:00</updated><id>https://github.com/Leeark/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86</id><content type="html" xml:base="https://github.com/Leeark/2022/09/05/%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E6%95%B4%E7%90%86/">&lt;p&gt;小狗钱钱整理-摘录&lt;/p&gt;
 
 &lt;h1 id=&quot;动力为何需要钱&quot;&gt;动力：为何需要钱？&lt;/h1&gt;
 
@@ -5907,64 +5907,4 @@ make: *** [upx] Error 125
 
 &lt;p&gt;到 &lt;a href=&quot;https://github.com/chaosblade-io/chaosblade/issues&quot;&gt;Issues&lt;/a&gt; 里翻到了几个类似的问题，官方给出的 &lt;a href=&quot;https://github.com/chaosblade-io/chaosblade/issues/478&quot;&gt;建议&lt;/a&gt;，比如修改系统【安全与隐私】-【通用】配置等，经验证都无效。&lt;/p&gt;
 
-&lt;p&gt;至此，如文首所述，放弃了在 Mac 平台下折腾，直接用 Linux 或者容器环境来体验。&lt;/p&gt;</content><author><name>Menghao Li</name></author><category term="混沌工程" /><summary type="html">首先声明，这不是一份指南，这是一份失败的操作流水记录。我得到的最终结果：编译成功，但是无法运行，放弃在 Mac 平台直接使用此工具，乖乖用 Linux 或者容器环境。</summary></entry><entry><title type="html">给 zsh 自定义命令添加参数自动补全</title><link href="https://github.com/Leeark/2022/02/12/zsh-completion/" rel="alternate" type="text/html" title="给 zsh 自定义命令添加参数自动补全" /><published>2022-02-12T00:00:00+08:00</published><updated>2022-02-12T00:00:00+08:00</updated><id>https://github.com/Leeark/2022/02/12/zsh-completion</id><content type="html" xml:base="https://github.com/Leeark/2022/02/12/zsh-completion/">&lt;p&gt;有时我会自定义一些 zsh 命令，以便提升某些高频操作的效率。本文记录我给一个自定义命令添加参数自动补全的方法。&lt;/p&gt;
-
-&lt;h2 id=&quot;场景&quot;&gt;场景&lt;/h2&gt;
-
-&lt;p&gt;我自定义了一个 zsh 命令 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gmt&lt;/code&gt;，执行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gmt &amp;lt;b2&amp;gt;&lt;/code&gt;，可以将当前所在的 git 分支 merge 到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;b2&amp;gt;&lt;/code&gt; 这个分支。&lt;/p&gt;
-
-&lt;p&gt;它具体完成以下工作：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;切换到 git 分支 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;b2&amp;gt;&lt;/code&gt;；&lt;/li&gt;
-  &lt;li&gt;将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;b2&amp;gt;&lt;/code&gt; 分支更新到最新；&lt;/li&gt;
-  &lt;li&gt;询问是否合并，输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; 则进行分支合并。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;也就是用一条命令完成一个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout b2&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull origin b2&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git merge b1&lt;/code&gt; 这样的组合操作。&lt;/p&gt;
-
-&lt;p&gt;用了一段时间，可以省一些事，美中不足的就是有时候分支名称比较长，只能手动输入，没有自动补全。&lt;/p&gt;
-
-&lt;h2 id=&quot;期望效果&quot;&gt;期望效果&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gmt &lt;/code&gt;，然后按 &lt;kbd&gt;tab&lt;/kbd&gt;，自动提示本地的所有 git 分支名称；&lt;/li&gt;
-  &lt;li&gt;输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gmt fe&lt;/code&gt;，然后按 &lt;kbd&gt;tab&lt;/kbd&gt;，自动补全以 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fe&lt;/code&gt; 开头的 git 分支名称；&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;实现方法&quot;&gt;实现方法&lt;/h2&gt;
-
-&lt;p&gt;在 zsh 配置文件中添加如下代码：&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;compdef _git_merge_to_comp git_merge_to
-
-_git_merge_to_comp&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; git_branches
-    &lt;span class=&quot;nv&quot;&gt;git_branches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(@f)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'%(refname:short)'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    _describe &lt;span class=&quot;s1&quot;&gt;'command'&lt;/span&gt; git_branches
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;注：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git_merge_to&lt;/code&gt; 是一个自定义的函数，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gmt&lt;/code&gt; 是这个函数的 alias。&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;这段代码的意思就是使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_git_merge_to_comp&lt;/code&gt; 这个函数来给 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git_merge_to&lt;/code&gt; 命令做自动补全，自动补全的候选列表是当前项目的所有本地 git 分支名称。&lt;/p&gt;
-
-&lt;p&gt;其中：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compdef&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_describe&lt;/code&gt; 等的用法，可以参考 zsh 的官方文档 &lt;a href=&quot;https://zsh.sourceforge.io/Doc/Release/Completion-System.html&quot;&gt;Completion System&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git_branches=(&quot;${(@f)$(git branch --format='%(refname:short)')}&quot;)&lt;/code&gt; 的意思是，将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git branch --format='%(refname:short)'&lt;/code&gt; 命令的输出按行分割后形成一个字符串数组，赋值给 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git_branches&lt;/code&gt; 变量，这部分可以参考 &lt;a href=&quot;https://unix.stackexchange.com/questions/29724/how-to-properly-collect-an-array-of-lines-in-zsh&quot;&gt;How to properly collect an array of lines in zsh&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;我的 zsh 配置都上传到了 &lt;a href=&quot;https://github.com/mzlogin/config-files&quot;&gt;https://github.com/mzlogin/config-files&lt;/a&gt;，有需要可以参考下。&lt;/p&gt;
-
-&lt;h2 id=&quot;效果演示&quot;&gt;效果演示&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/posts/shell/zsh-gmt-completion.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;参考&quot;&gt;参考&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://zsh.sourceforge.io/Doc/Release/Completion-System.html&quot;&gt;Completion System&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/29724/how-to-properly-collect-an-array-of-lines-in-zsh&quot;&gt;How to properly collect an array of lines in zsh&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Menghao Li</name></author><category term="Shell" /><summary type="html">有时我会自定义一些 zsh 命令，以便提升某些高频操作的效率。本文记录我给一个自定义命令添加参数自动补全的方法。</summary></entry></feed>
+&lt;p&gt;至此，如文首所述，放弃了在 Mac 平台下折腾，直接用 Linux 或者容器环境来体验。&lt;/p&gt;</content><author><name>Menghao Li</name></author><category term="混沌工程" /><summary type="html">首先声明，这不是一份指南，这是一份失败的操作流水记录。我得到的最终结果：编译成功，但是无法运行，放弃在 Mac 平台直接使用此工具，乖乖用 Linux 或者容器环境。</summary></entry></feed>
