@@ -5427,23 +5427,53 @@ Count.vue
    }
    ```
 
-## 4.13 路由器的两种工作模式
+## 4.13 完整的导航解析流程
 
-1. 对于一个url来说，什么是hash值？—— #及其后面的内容就是hash值。
+1. 导航被触发。
+2. 在失活的组件里调用 `beforeRouteLeave` 守卫。
+3. 调用全局的 `beforeEach` 守卫。
+4. 在重用的组件里调用 `beforeRouteUpdate` 守卫 (2.2+)。
+5. 在路由配置里调用 `beforeEnter`。
+6. 解析异步路由组件。
+7. 在被激活的组件里调用 `beforeRouteEnter`。
+8. 调用全局的 `beforeResolve` 守卫 (2.5+)。
+9. 导航被确认。
+10. 调用全局的 `afterEach` 钩子。
+11. 触发 DOM 更新。
+12. 调用 `beforeRouteEnter` 守卫中传给 `next` 的回调函数，创建好的组件实例会作为回调函数的参数传入。
 
-2. hash值不会包含在 HTTP 请求中，即：hash值不会带给服务器。
+## 4.14 路由器的两种工作模式
 
-3. hash模式：
+1. hash模式原理
+   hash 是通过监听浏览器 onhashchange 事件变化，查找对应路由应用。通过改变 location.hash 改变页面路由。
 
-   1. 地址中永远带着#号，不美观 。
-   2. 若以后将地址通过第三方手机app分享，若app校验严格，则地址会被标记为不合法。
-   3. 兼容性较好。
+2. history模式原理
+   利用 html5 的浏览器history对象中新增的 pushState() 和 replaceState() 方法，改变页面路由。
 
-4. history模式：
+   history Interface 是浏览器历史记录栈提供的接口，可通过 back、forward、go 等，可以读取历览器历史记录栈的信息，pushState、repalceState 还可以对浏览器历史记录栈进行修改。
 
-   1. 地址干净，美观 。
-   2. 兼容性和hash模式相比略差。
-   3. 应用部署上线时需要后端人员支持，解决刷新页面服务端404的问题。
+   在HTML4中，已经支持window.history对象来控制页面历史记录跳转，常用的方法包括：
+
+   - history.forward(); //在历史记录中前进一步
+   - history.back(); //在历史记录中后退一步
+   - history.go(n): //在历史记录中跳转n步骤，n=0为刷新本页,n=-1为后退一页。
+
+   在HTML5中，window.history对象得到了扩展，新增的API包括：
+
+   - history.pushState(data,title[,url]);//向历史记录中追加一条记录
+   - history.replaceState(data,title[,url]);//替换当前页在历史记录中的信息。
+   - history.state;//是一个属性，可以得到当前页的state信息。
+   - window.onpopstate;//是一个事件，在点击浏览器后退按钮或js调用forward()、back()、go()时触发。监听函数中可传入一个event对象，event.state即为通过pushState()或replaceState()方法传入的data参数
+
+   hash 与 history 区别对比：
+
+   | hash                                                         | history                                                      |
+   | ------------------------------------------------------------ | ------------------------------------------------------------ |
+   | 有#号                                                        | 没有 # 号                                                    |
+   | 兼容到IE8                                                    | 兼容到IE10                                                   |
+   | 实际的url之前使用哈希字符，这部分url不会发送到服务器，不需要在服务器层面上进行任何处理 | 每访问一个页面都要发起网络请求，每个请求都需要服务器进行路由匹配、数据库查询、生成HTML文档后再发送响应给浏览器，这个过程会消耗服务器的大量资源，给服务器的压力较大。 |
+   | 刷新不会存在 404 问题                                        | 浏览器直接访问嵌套路由时，会报 404 问题。                    |
+   | 不需要服务器任何配置                                         | 需要在服务器配置一个回调路由                                 |
 
     
 
