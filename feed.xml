@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-07T15:29:09+08:00</updated><id>/feed.xml</id><title type="html">reading writing | Lee</title><subtitle>李梦豪的个人博客</subtitle><author><name>Menghao Li</name></author><entry><title type="html">CSS知识梳理</title><link href="/2022/09/05/CSS%E7%9B%B8%E5%85%B3/" rel="alternate" type="text/html" title="CSS知识梳理" /><published>2022-09-05T00:00:00+08:00</published><updated>2022-09-05T00:00:00+08:00</updated><id>/2022/09/05/CSS%E7%9B%B8%E5%85%B3</id><content type="html" xml:base="/2022/09/05/CSS%E7%9B%B8%E5%85%B3/">&lt;h1 id=&quot;css3新特性&quot;&gt;CSS3新特性&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-07T17:07:54+08:00</updated><id>/feed.xml</id><title type="html">reading writing | Lee</title><subtitle>李梦豪的个人博客</subtitle><author><name>Menghao Li</name></author><entry><title type="html">CSS知识梳理</title><link href="/2022/09/05/CSS%E7%9B%B8%E5%85%B3/" rel="alternate" type="text/html" title="CSS知识梳理" /><published>2022-09-05T00:00:00+08:00</published><updated>2022-09-05T00:00:00+08:00</updated><id>/2022/09/05/CSS%E7%9B%B8%E5%85%B3</id><content type="html" xml:base="/2022/09/05/CSS%E7%9B%B8%E5%85%B3/">&lt;h1 id=&quot;css3新特性&quot;&gt;CSS3新特性&lt;/h1&gt;
 
 &lt;h2 id=&quot;css3边框&quot;&gt;CSS3边框&lt;/h2&gt;
 
@@ -7981,32 +7981,85 @@ sessionStorage.key(index)
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;413-路由器的两种工作模式&quot;&gt;4.13 路由器的两种工作模式&lt;/h2&gt;
+&lt;h2 id=&quot;413-完整的导航解析流程&quot;&gt;4.13 完整的导航解析流程&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;导航被触发。&lt;/li&gt;
+  &lt;li&gt;在失活的组件里调用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beforeRouteLeave&lt;/code&gt; 守卫。&lt;/li&gt;
+  &lt;li&gt;调用全局的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beforeEach&lt;/code&gt; 守卫。&lt;/li&gt;
+  &lt;li&gt;在重用的组件里调用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beforeRouteUpdate&lt;/code&gt; 守卫 (2.2+)。&lt;/li&gt;
+  &lt;li&gt;在路由配置里调用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beforeEnter&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;解析异步路由组件。&lt;/li&gt;
+  &lt;li&gt;在被激活的组件里调用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beforeRouteEnter&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;调用全局的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beforeResolve&lt;/code&gt; 守卫 (2.5+)。&lt;/li&gt;
+  &lt;li&gt;导航被确认。&lt;/li&gt;
+  &lt;li&gt;调用全局的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;afterEach&lt;/code&gt; 钩子。&lt;/li&gt;
+  &lt;li&gt;触发 DOM 更新。&lt;/li&gt;
+  &lt;li&gt;调用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beforeRouteEnter&lt;/code&gt; 守卫中传给 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt; 的回调函数，创建好的组件实例会作为回调函数的参数传入。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;414-路由器的两种工作模式&quot;&gt;4.14 路由器的两种工作模式&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;对于一个url来说，什么是hash值？—— #及其后面的内容就是hash值。&lt;/p&gt;
+    &lt;p&gt;hash模式原理
+hash 是通过监听浏览器 onhashchange 事件变化，查找对应路由应用。通过改变 location.hash 改变页面路由。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;hash值不会包含在 HTTP 请求中，即：hash值不会带给服务器。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;hash模式：&lt;/p&gt;
+    &lt;p&gt;history模式原理
+利用 html5 的浏览器history对象中新增的 pushState() 和 replaceState() 方法，改变页面路由。&lt;/p&gt;
 
-    &lt;ol&gt;
-      &lt;li&gt;地址中永远带着#号，不美观 。&lt;/li&gt;
-      &lt;li&gt;若以后将地址通过第三方手机app分享，若app校验严格，则地址会被标记为不合法。&lt;/li&gt;
-      &lt;li&gt;兼容性较好。&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;history模式：&lt;/p&gt;
+    &lt;p&gt;history Interface 是浏览器历史记录栈提供的接口，可通过 back、forward、go 等，可以读取历览器历史记录栈的信息，pushState、repalceState 还可以对浏览器历史记录栈进行修改。&lt;/p&gt;
 
-    &lt;ol&gt;
-      &lt;li&gt;地址干净，美观 。&lt;/li&gt;
-      &lt;li&gt;兼容性和hash模式相比略差。&lt;/li&gt;
-      &lt;li&gt;应用部署上线时需要后端人员支持，解决刷新页面服务端404的问题。&lt;/li&gt;
-    &lt;/ol&gt;
+    &lt;p&gt;在HTML4中，已经支持window.history对象来控制页面历史记录跳转，常用的方法包括：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;history.forward(); //在历史记录中前进一步&lt;/li&gt;
+      &lt;li&gt;history.back(); //在历史记录中后退一步&lt;/li&gt;
+      &lt;li&gt;history.go(n): //在历史记录中跳转n步骤，n=0为刷新本页,n=-1为后退一页。&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;在HTML5中，window.history对象得到了扩展，新增的API包括：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;history.pushState(data,title[,url]);//向历史记录中追加一条记录&lt;/li&gt;
+      &lt;li&gt;history.replaceState(data,title[,url]);//替换当前页在历史记录中的信息。&lt;/li&gt;
+      &lt;li&gt;history.state;//是一个属性，可以得到当前页的state信息。&lt;/li&gt;
+      &lt;li&gt;window.onpopstate;//是一个事件，在点击浏览器后退按钮或js调用forward()、back()、go()时触发。监听函数中可传入一个event对象，event.state即为通过pushState()或replaceState()方法传入的data参数&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;hash 与 history 区别对比：&lt;/p&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;hash&lt;/th&gt;
+          &lt;th&gt;history&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;有#号&lt;/td&gt;
+          &lt;td&gt;没有 # 号&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;兼容到IE8&lt;/td&gt;
+          &lt;td&gt;兼容到IE10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;实际的url之前使用哈希字符，这部分url不会发送到服务器，不需要在服务器层面上进行任何处理&lt;/td&gt;
+          &lt;td&gt;每访问一个页面都要发起网络请求，每个请求都需要服务器进行路由匹配、数据库查询、生成HTML文档后再发送响应给浏览器，这个过程会消耗服务器的大量资源，给服务器的压力较大。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;刷新不会存在 404 问题&lt;/td&gt;
+          &lt;td&gt;浏览器直接访问嵌套路由时，会报 404 问题。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;不需要服务器任何配置&lt;/td&gt;
+          &lt;td&gt;需要在服务器配置一个回调路由&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
