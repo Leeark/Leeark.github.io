@@ -5371,6 +5371,8 @@ Count.vue
 
 3. 全局守卫:
 
+   在 2.5.0+ 你可以用 `router.beforeResolve` 注册一个全局守卫。这和 `router.beforeEach` 类似，区别是在导航被确认之前，**同时在所有组件内守卫和异步路由组件被解析之后**，解析守卫就被调用。
+
    ```js
    //全局前置守卫：初始化时执行、每次路由切换前执行
    router.beforeEach((to,from,next)=>{
@@ -5387,7 +5389,8 @@ Count.vue
    	}
    })
    
-   //全局后置守卫：初始化时执行、每次路由切换后执行
+   //全局后置钩子：初始化时执行、每次路由切换后执行
+   //你也可以注册全局后置钩子，然而和守卫不同的是，这些钩子不会接受 next 函数也不会改变导航本身
    router.afterEach((to,from)=>{
    	console.log('afterEach',to,from)
    	if(to.meta.title){ 
@@ -5401,7 +5404,19 @@ Count.vue
 4. 独享守卫:
 
    ```js
-   beforeEnter(to,from,next){
+   const router = new VueRouter({
+     routes: [
+       {
+         path: '/foo',
+         component: Foo,
+         beforeEnter: (to, from, next) => {
+           // ...
+         }
+       }
+     ]
+   })
+   //例如:
+   beforeEnter(to, from, next){
    	console.log('beforeEnter',to,from)
    	if(to.meta.isAuth){ //判断当前路由是否需要进行权限控制
    		if(localStorage.getItem('school') === 'atguigu'){
@@ -5419,11 +5434,32 @@ Count.vue
 5. 组件内守卫：
 
    ```js
-   //进入守卫：通过路由规则，进入该组件时被调用
-   beforeRouteEnter (to, from, next) {
-   },
-   //离开守卫：通过路由规则，离开该组件时被调用
-   beforeRouteLeave (to, from, next) {
+   const Foo = {
+     template: `...`,
+     beforeRouteEnter(to, from, next) {
+       // 在渲染该组件的对应路由被 confirm 前调用
+       // 不！能！获取组件实例 `this`
+       // 因为当守卫执行前，组件实例还没被创建
+       //不过，你可以通过传一个回调给 next来访问组件实例。在导航被确认的时候执行回调，并且把组件实例作为回调方法的参数。
+     },
+     beforeRouteUpdate(to, from, next) {
+       // 在当前路由改变，但是该组件被复用时调用
+       // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
+       // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+       // 可以访问组件实例 `this`
+       // (2.2 新增)
+     },
+     beforeRouteLeave(to, from, next) {
+       // 导航离开该组件的对应路由时调用
+       // 可以访问组件实例 `this`
+       //这个离开守卫通常用来禁止用户在还未保存修改前突然离开。该导航可以通过 next(false) 来取消。
+         const answer = window.confirm('Do you really want to leave? you have unsaved changes!')
+     if (answer) {
+       next()
+       } else {
+       next(false)
+         }
+     }
    }
    ```
 
